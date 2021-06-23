@@ -19,8 +19,6 @@ variables:
 - template: vars/global.yaml
 - ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/main') }}:
   - group: e2e-gov-demo-dev-kv
-# - ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/fix/cd-pipeline') }}:
-#   - group: e2e-gov-demo-dev-kv
 - ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/production') }}:
   - group: e2e-gov-demo-kv
 
